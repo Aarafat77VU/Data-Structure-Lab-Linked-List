@@ -1,0 +1,48 @@
+#include<iostream>
+#include<list>
+using namespace std;
+
+int main()
+{
+  int n,f;
+
+    list<int>L;
+    list<int>:: iterator i;
+    list<int>:: iterator j;
+
+
+    cout<<"\n\n\t\tEnter The Number Of Elements : ";
+    cin>>n;
+
+    for(f=0; f<n; f++)
+    {
+
+        int temp;
+        cin>>temp;
+
+        L.push_back(temp);
+    }
+
+    for(i=L.begin(); i!=L.end(); i++)
+    {
+
+        if(*i==4)
+        break;
+    }
+
+
+    for(j=L.begin(); j!=L.end(); j++)
+    {
+       if(*j==7)
+        break;
+
+    }
+    j++;
+    L.erase(i,j);
+
+     for(j=L.begin(); j!=L.end(); j++)
+    {
+       cout<<*j<<endl;
+
+    }
+}

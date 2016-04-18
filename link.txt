@@ -1,0 +1,61 @@
+https://github.com/Aarafat77VU/NASA_SPACE_APP_CHLANGE_2016.git
+
+
+
+#include<iostream>
+#include<stack>
+#include<string>
+
+using namespace std;
+
+int main()
+
+{
+    stack<char>mystack;
+
+    string s;
+    int i;
+
+    cout<<"Enter String : ";
+    getline(cin,s);
+
+
+for(i=0;i<s.size();i++)
+{
+    if(s[i]=='(')
+    {
+        mystack.push(s.at(i));
+
+    }
+
+    else
+    {
+        if(mystack.size()==0)
+        {
+            cout<<"Invalid Input";
+            break;
+        }
+
+
+
+
+            else
+            {
+                 mystack.pop();
+            }
+
+    }
+
+}
+if(i==s.size())
+{
+    if(mystack.size()>0)
+    {
+        cout<<"Invalid";
+    }
+    else
+        cout<<"Valid";
+
+}
+
+}
